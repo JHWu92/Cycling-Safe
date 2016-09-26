@@ -14,7 +14,7 @@
 
 ### Tools
 1. [Geopandas][Geopandas] (python package)
-  - geopandas.tools.sjoin: it can analyse points in polygon/intersections of polygons. Quite efficient.
+  - geopandas.tools.sjoin: it can analyse points in polygon/intersections of polygons.
 
 [MV_dc]:http://opendata.dc.gov/datasets?q=moving+violations&sort_by=relevance
 [Geopandas]:http://geopandas.org/
