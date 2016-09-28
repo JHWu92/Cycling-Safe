@@ -15,6 +15,9 @@
 ### Tools
 1. [Geopandas][Geopandas] (python package)
   - geopandas.tools.sjoin: it can analyse points in polygon/intersections of polygons.
+2. [SNAP][SNAP] (python package): Stanford Network Analysis Project
+  - snap.GetBetweennessCentr can calculate betweenness for nodes and edges.
+
 
 [MV_dc]:http://opendata.dc.gov/datasets?q=moving+violations&sort_by=relevance
 [Geopandas]:http://geopandas.org/
