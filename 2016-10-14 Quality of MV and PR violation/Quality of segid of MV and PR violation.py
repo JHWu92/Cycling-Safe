@@ -21,7 +21,7 @@ def pts2seg(pts, gp_segs, buffer_dis=50, near_dis_thres=5):
         mask = (~pts_crs_bfr.OBJECTID.isin(handledid))
         
     far_jns = pd.concat(far_jns)
-    mr = pd.merge(dc_segs[['geometry','STREETSEGID']],far_jns , left_on='STREETSEGID', right_on='STREETSEGID_right')
+    mr = pd.merge(gp_segs[['geometry','STREETSEGID']],far_jns , left_on='STREETSEGID', right_on='STREETSEGID_right')
     mr = pd.merge(pts[['OBJECTID','geometry','STREETSEGID']],mr, left_on='OBJECTID', right_on='OBJECTID_left')
     mr['dis']=mr.apply(lambda x: ptfromln(x.geometry_x, x.geometry_y),axis=1)
     result = close_jn.groupby('OBJECTID_left')['STREETSEGID_right'].apply(list).append(mr.groupby('OBJECTID').apply(lambda x: [x.ix[x.dis.idxmin()].STREETSEGID_y]))
