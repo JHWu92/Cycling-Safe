@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 def pts2seg(pts, gp_segs, buffer_dis=50, near_dis_thres=5):
-    pts_crs,gp_segs_crs = pts.to_crs(epsg=3559), dc_segs.to_crs(epsg=3559)
+    pts_crs,gp_segs_crs = pts.to_crs(epsg=3559), gp_segs.to_crs(epsg=3559)
     pts_crs_bfr = pts_crs.copy()
 
     pts_crs_bfr.geometry = pts_crs_bfr.buffer(near_dis_thres*1.1)
