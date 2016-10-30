@@ -46,7 +46,7 @@ class osm_container:
         return osm_objs
     
     def data_size(self):
-        return ['len of {} = {}'.format(key, len(v)) for key, v in OSM_DATA.osm_objs.items()]
+        return ['len of {} = {}'.format(key, len(v)) for key, v in self.osm_objs.items()]
         
     def build_idx(self):
         osm_objs_idx = {}
