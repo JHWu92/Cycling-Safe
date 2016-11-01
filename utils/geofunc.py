@@ -1,3 +1,21 @@
+    
+def grid_line(mini, maxi, ngrid=10):
+    delta = (maxi-mini)/ngrid
+    return [(mini+i*delta, mini+(i+1)*delta) for i in range(ngrid)] 
+
+
+def grid_area(sw, ne, ngrid=10):
+    grid_lat = grid_line(sw[0], ne[0], ngrid)
+    grid_lon = grid_line(sw[1], ne[1], ngrid)
+    grids = []
+    for i in range(ngrid):
+        for j in range(ngrid):
+            s, n = grid_lat[i]
+            w, e = grid_lon[j]
+            grids.append(((s,w),(n,e)))
+    return grids
+    
+
 def haversine(lon1, lat1, lon2, lat2):
     """
     Calculate the great circle distance between two points 

@@ -3,8 +3,11 @@ import time
 import geopandas as gp
 import pandas as pd
 import shapely.geometry as shpgeo
+import sys, os
+sys.path.insert(0, os.path.abspath('../'))
+print sys.path
 
-
+from utils.geofunc import grid_line, grid_area
 def tu2str(tu):
     return ','.join([str(t) for t in tu])
 
@@ -12,22 +15,7 @@ def tu2str(tu):
 def swne2poly(sw,ne):
     return shpgeo.box(sw[1], sw[0], ne[1], ne[0])
     
-    
-def grid_line(mini, maxi, ngrid=10):
-    delta = (maxi-mini)/ngrid
-    return [(mini+i*delta, mini+(i+1)*delta) for i in range(ngrid)] 
-
-
-def grid_area(sw, ne, ngrid=10):
-    grid_lat = grid_line(sw[0], ne[0], ngrid)
-    grid_lon = grid_line(sw[1], ne[1], ngrid)
-    grids = []
-    for i in range(ngrid):
-        for j in range(ngrid):
-            s, n = grid_lat[i]
-            w, e = grid_lon[j]
-            grids.append(((s,w),(n,e)))
-    return grids
+   
     
 import foursquare
 clients_id_secret = [
@@ -46,7 +34,7 @@ clients = [foursquare.Foursquare(client_id=client_id, client_secret=client_secre
 print 'prepare foursquare api'
     
     
-dc_poly_gpdf = gp.read_file('data/dc_polygon.geojson')
+dc_poly_gpdf = gp.read_file('../data/dc_polygon.geojson')
 dc_poly = dc_poly_gpdf.geometry.values[0]
 dc_bbox = dc_poly.buffer(0.001).bounds
 SW = (dc_bbox[1], dc_bbox[0])
@@ -71,11 +59,11 @@ while len(grids)>0:
             grids.extend(new_grids)
         if request_cnt % 2000==0:
             print 'requested', request_cnt, ', writing results'
-            with open('data/output/4square/{}.txt'.format(request_cnt),'w') as f:
+            with open('../data/output/4square/{}.txt'.format(request_cnt),'w') as f:
                 f.write('\n'.join(data_cach))
             data_cach = []
 if len(data_cach)>0:
-    with open('data/output/4square/{}.txt'.format(request_cnt),'w') as f:
+    with open('../data/output/4square/{}.txt'.format(request_cnt),'w') as f:
         f.write('\n'.join(data_cach))
     data_cach = []
     
