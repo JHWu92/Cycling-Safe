@@ -30,6 +30,14 @@ def rltn2poly(osm_data, relation):
     merged_line = linemerge(cltn)
     return shpgeo.Polygon(merged_line)
 
+def rltn2cltn(osm_data, relation):
+    cltn = []
+    for m in relation.members:
+        obj = osm_data.get_osm_obj_by_id(m.type, m.member_id)
+        shpobj = way2line(osm_data, obj) if m.type==Way else node2pt(obj)
+        cltn.append(shpobj)
+    return shpgeo.GeometryCollection(cltn)
+
 
 class osm_container:
     def __init__(self, osm_path):
@@ -66,3 +74,4 @@ class osm_container:
 
     def get_osm_relation_by_id(self, oid):
         return self.get_osm_obj_by_id(Relation, oid)
+
