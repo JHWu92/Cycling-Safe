@@ -5,6 +5,7 @@ import shapely.geometry as shpgeo
 from osmread import parse_file, Node, Way, Relation
 import datetime
 from shapely.ops import linemerge
+from geofunc import remove_equal_shpobj, merge_within
 
 
 def node2pt(node):
@@ -30,15 +31,57 @@ def rltn2poly(osm_data, relation):
     merged_line = linemerge(cltn)
     return shpgeo.Polygon(merged_line)
 
-def rltn2cltn(osm_data, relation):
-    cltn = []
+def rltn2cltn(osm_data, relation, sub_rltn=False):
+    nodes, ways, sub_nodes, sub_ways = [],[], [], []
     for m in relation.members:
         obj = osm_data.get_osm_obj_by_id(m.type, m.member_id)
-        shpobj = way2line(osm_data, obj) if m.type==Way else node2pt(obj)
-        cltn.append(shpobj)
-    return shpgeo.GeometryCollection(cltn)
+        if m.type == Node:
+            nodes.append(obj)
+        elif m.type==Way:    
+            ways.append(obj)
+        elif m.type==Relation: 
+            r_nodes, r_ways = rltn2cltn(osm_data, obj, True)
+            sub_nodes.extend(r_nodes)
+            sub_ways.extend(r_ways)
+    if sub_rltn:
+        return nodes, ways
+    
+    nodes.extend([node for node in sub_nodes])
+    ways.extend([way for way in sub_ways])
 
+    nodes = [node2pt(node) for node in nodes]
+    ways = [way2line(osm_data, way) for way in ways]
+    
+    nodes = remove_equal_shpobj(nodes)
+    ways = remove_equal_shpobj(ways)
+    
+    shpcltn = {'Point':nodes, 'LineString':[], 'Polygon':[]}
+    if ways:
+        merged = linemerge(ways)
+        if merged.type == 'LineString':
+            merged = [merged]
+        else:
+            merged = list(merged)
+        for ln in merged:
+            if ln.is_ring:
+                shpcltn['Polygon'].append(shpgeo.Polygon(ln))
+            else: 
+                shpcltn['LineString'].append(ln)
+    return shpcltn
 
+def rltn2mergedCltn(osm_data,relation):
+    try:
+        shpcltn = rltn2cltn(osm_data,relation)
+    except Exception as e:
+        print relation.id, "relation's member out of osm bound, no need to consider", e
+        return None, 'error'
+    list_shp = []
+    for l in shpcltn.values():
+        list_shp+=l
+    merge_shpcltn = merge_within(list_shp)
+    return merge_shpcltn, 'ok'
+    
+    
 class osm_container:
     def __init__(self, osm_path):
         self.osm_path = osm_path

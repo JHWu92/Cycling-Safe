@@ -1,4 +1,30 @@
-    
+def remove_equal_shpobj(objs):
+    new_objs = []
+    size = len(objs)
+    equal_pair = []
+    for i in range(size):
+        for j in range(i+1, size):
+            if objs[i].equals(objs[j]):
+                equal_pair.append((i,j))
+    idx = [i for i in range(size)]
+    for i, j in equal_pair:
+        idx.remove(j)
+    new_objs = [objs[i] for i in idx]
+    return new_objs
+
+
+def merge_within(list_shp):
+    import geopandas as gp
+    import pandas as pd
+    from other_utils import find_tree
+    gpdf = gp.GeoDataFrame(list_shp,columns=['geometry'])
+    sjoin = gp.tools.sjoin(gpdf,gpdf,op='within')
+    messy_tree_df = pd.DataFrame(zip(sjoin.index.values, sjoin.index_right.values), columns=['child','parent'])
+    clean_tree_df = find_tree(messy_tree_df)
+    top_level_shp_idx = clean_tree_df[clean_tree_df.parent=='root'].child.values
+    return gpdf[gpdf.index.isin(top_level_shp_idx)]
+
+
 def grid_line(mini, maxi, ngrid=10):
     delta = (maxi-mini)/ngrid
     return [(mini+i*delta, mini+(i+1)*delta) for i in range(ngrid)] 
