@@ -121,7 +121,7 @@ def clean_init_layers(init_layers, allow_style, binding_data):
     return cleaned_init_layers
 
 
-def create_leaflet(html_title, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, width=700, height=700):
+def create_leaflet(html_title, file_path, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, width=700, height=700):
 
     allow_style = ['light', 'dark', 'outdoors', 'satellite', 'streets']
     if len(set(map_layers)-set(allow_style))!=0:
@@ -134,14 +134,14 @@ def create_leaflet(html_title, file_name, lat, lon, zoom, init_layers, map_layer
     check_radio_layers = get_check_radio_layers(binding_data, map_layers)
     check_layers = check_radio_layers[0]
     radio_layers = check_radio_layers[1]
-    with open(file_name+'.html','w') as f:
+    with open(file_path+file_name+'.html','w') as f:
         f.write(template.format(html_title=html_title, file_name=file_name, width=width, height=height, map=map,
                       map_style_layers=map_style_str, bind_data_to_layers=bind_data_to_layers,
                           check_layers=check_layers, radio_layers=radio_layers))
 
 
-def create_js_data(file_name, binding_data, gpdfs):
-    with open(file_name+'.js', 'w') as f:
+def create_js_data(file_path, file_name, binding_data, gpdfs):
+    with open(file_path+ file_name+'.js', 'w') as f:
         for i, bd in enumerate(binding_data):
             var = bd[0]
             gpdf = gpdfs[i]
@@ -149,15 +149,16 @@ def create_js_data(file_name, binding_data, gpdfs):
             f.write('var {var} = {js};\n'.format(var=var, js=js))
 
 
-def create_map_visualization(html_title, file_name, lat, lon, zoom,
+def create_map_visualization(html_title, file_path, file_name, lat, lon, zoom,
                              init_layers, map_layers, binding_data, gpdfs, width=700, height=700):
     assert len(binding_data)==len(gpdfs)
-    create_leaflet(html_title, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, width, height)
-    create_js_data(file_name, binding_data, gpdfs)
+    create_leaflet(html_title, file_path, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, width, height)
+    create_js_data(file_path, file_name, binding_data, gpdfs)
 
 
 def test():
     html_title = 'openstreetmap elements'
+    file_path = ''
     file_name = 'test creation of leaflet'
     lon, lat  = -77.0908494, 38.9045525
     zoom = 18
@@ -169,7 +170,7 @@ def test():
     gpdfs = []
     gpdfs.append(gp.GeoDataFrame([Point(-77.116761, 38.9305064),Point(-77.1069168, 38.9195066)], columns=['geometry']))
     gpdfs.append(gp.GeoDataFrame([Point(-77.0908494, 38.9045525),Point(-77.0684995, 38.9000923)], columns=['geometry']))
-    create_map_visualization(html_title, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, gpdfs)
+    create_map_visualization(html_title, file_path, file_name, lat, lon, zoom, init_layers, map_layers, binding_data, gpdfs)
 
 if __name__ == "__main__":
     test()
