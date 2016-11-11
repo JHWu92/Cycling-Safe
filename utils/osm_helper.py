@@ -7,7 +7,52 @@ import datetime
 from shapely.ops import linemerge
 from geofunc import remove_equal_shpobj, merge_within
 
+def have_tag_value(obj, tag='*', value='*'):
+    if not obj.tags: # have no tag, discard it whatever query is
+        return False
+    if tag=='*': # True for having any tag
+        return True
+    if not tag in obj.tags:
+        return False
+    if value=='*':
+        return True
+    return obj.tags[tag] in value
 
+def filter_obj(obj, have_one=[('*','*')], donthave=[]):
+    for tag, value in donthave:
+        if have_tag_value(obj,tag, value):
+            return False
+    
+    for tag, value in have_one:
+        if have_tag_value(obj, tag,value):
+            return True
+    return False
+
+def filter_osm_data(osm_objs,have_one=[('*','*')], donthave=[], special_filters=None):
+    objs = []
+    if special_filters:
+        for o in osm_objs:
+            pass_filter = True
+            for filt in special_filters:
+                if not filt(o): 
+                    pass_filter=False
+                    break
+            if pass_filter:
+                objs.append(o)
+    else:
+        for o in osm_objs:
+            if filter_obj(o, have_one, donthave):
+                objs.append(o)
+    return objs
+
+def filter_osm_data_to_df(osm_objs,have_one=[('*','*')], donthave=[], special_filters=None):
+    objs = filter_osm_data(osm_objs,have_one, donthave, special_filters=None)
+    attr =[x[0] for x in have_one]
+    objs = [[o.id]+[o.tags.get(k,'') for k in attr] for o in objs]
+    df_objs = pd.DataFrame(objs, columns=['id']+attr)
+    return df_objs
+    
+    
 def node2pt(node):
     return shpgeo.Point(node.lon,node.lat)
 
