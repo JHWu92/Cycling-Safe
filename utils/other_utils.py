@@ -26,9 +26,9 @@ def find_tree_buggy(messy_tree_df, parent_node='root', lv=1):
 def find_direct_parent(tree, node, direct_parents):
     if node in direct_parents:
         return direct_parents[node]
-    node_parents = tree[tree.child==node].parent.values
+    node_parents = tree[tree.node==node].parent.values
     if len(node_parents)==0:
-        direct_parents[node]=(node, 'root',1)
+        direct_parents[node]=(node, -1,1)
         return direct_parents[node]
     node_parents_lv = [find_direct_parent(tree, p, direct_parents)[2] for p in node_parents]
     max_lv = max(node_parents_lv)
@@ -37,11 +37,12 @@ def find_direct_parent(tree, node, direct_parents):
     return (node, direct_parent, max_lv+1)
 
 def find_tree(messy_tree_df):
+    import pandas as pd
     direct_parents={}
-    all_nodes = set(messy_tree_df.child)
-    messy_tree_df = messy_tree_df[messy_tree_df.child!=messy_tree_df.parent].copy()
+    all_nodes = set(messy_tree_df.node)
+    messy_tree_df = messy_tree_df[messy_tree_df.node!=messy_tree_df.parent].copy()
     new_tree = []
     for node in all_nodes:
         x = find_direct_parent(messy_tree_df, node, direct_parents)
         new_tree.append(x)
-    return pd.DataFrame(new_tree,columns=['child','parent','lv']).sort('lv')
+    return pd.DataFrame(new_tree,columns=['node','parent','lv']).sort('lv')

@@ -5,7 +5,7 @@ import shapely.geometry as shpgeo
 from osmread import parse_file, Node, Way, Relation
 import datetime
 from shapely.ops import linemerge
-from geofunc import remove_equal_shpobj, merge_within
+from geofunc import remove_equal_shpobj, merge_within_by_list_shp
 
 def have_tag_value(obj, tag='*', value='*'):
     if not obj.tags: # have no tag, discard it whatever query is
@@ -22,7 +22,7 @@ def filter_obj(obj, have_one=[('*','*')], donthave=[]):
     for tag, value in donthave:
         if have_tag_value(obj,tag, value):
             return False
-    
+
     for tag, value in have_one:
         if have_tag_value(obj, tag,value):
             return True
@@ -34,7 +34,7 @@ def filter_osm_data(osm_objs,have_one=[('*','*')], donthave=[], special_filters=
         for o in osm_objs:
             pass_filter = True
             for filt in special_filters:
-                if not filt(o): 
+                if not filt(o):
                     pass_filter=False
                     break
             if pass_filter:
@@ -123,16 +123,16 @@ def rltn2mergedCltn(osm_data,relation):
     list_shp = []
     for l in shpcltn.values():
         list_shp+=l
-    merge_shpcltn = merge_within(list_shp)
+    merge_shpcltn = merge_within_by_list_shp(list_shp)
     return merge_shpcltn, 'ok'
     
-    
+
 class osm_container:
     def __init__(self, osm_path):
         self.osm_path = osm_path
         self.osm_objs = self.read_osm()
         self.osm_objs_idx = self.build_idx()
-    
+
     def read_osm(self):
         print 'begin reading osm', datetime.datetime.now()
         osm_objs = {Node: [], Way: [], Relation: []}
@@ -140,16 +140,16 @@ class osm_container:
             osm_objs[type(obj)].append(obj)
         print 'finish reading osm', datetime.datetime.now()
         return osm_objs
-    
+
     def data_size(self):
         return ['len of {} = {}'.format(key, len(v)) for key, v in self.osm_objs.items()]
-        
+
     def build_idx(self):
         osm_objs_idx = {}
         for otype, objs in self.osm_objs.items():
             osm_objs_idx[otype] = {o.id:i for i, o in enumerate(objs)}
         return osm_objs_idx
-        
+
     def get_osm_obj_by_id(self, otype, oid):
         idx = self.osm_objs_idx[otype][oid]
         return self.osm_objs[otype][idx]

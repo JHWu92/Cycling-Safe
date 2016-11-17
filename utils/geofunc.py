@@ -1,29 +1,61 @@
 def remove_equal_shpobj(objs):
-    new_objs = []
+    import rtree
     size = len(objs)
     equal_pair = []
-    for i in range(size):
-        for j in range(i+1, size):
-            if objs[i].equals(objs[j]):
-                equal_pair.append((i,j))
-    idx = [i for i in range(size)]
-    for i, j in equal_pair:
-        idx.remove(j)
-    new_objs = [objs[i] for i in idx]
-    return new_objs
+    keep = []
+    exclude_idx = set()
+
+    tree_idx = rtree.index.Index()
+    objs_bounds = [o.bounds for o in objs]
+    for i in xrange(size):
+        try:
+            tree_idx.insert(i, objs_bounds[i])
+        except Exception as e:
+            print i, objs_bounds[i], objs[i]
+            raise e
+
+    for i in xrange(size):
+        if i in exclude_idx:
+            continue
+        keep.append(i)
+        js = tree_idx.intersection(objs[i].bounds)
+        for j in js:
+            if i!=j and objs[i].equals(objs[j]):
+                equal_pair.append((i,int(j)))
+                exclude_idx.add(j)
+
+    return keep, equal_pair
 
 
-def merge_within(list_shp):
+def merge_within(shp_gpdf):
+    import geopandas as gp
+    import pandas as pd
+    import datetime
+    from other_utils import find_tree
+    print 'begin merge within', datetime.datetime.now()
+    keep, equal_pair= remove_equal_shpobj(shp_gpdf.geometry.values)
+    equal_pair_index = [(shp_gpdf.iloc[i].name, shp_gpdf.iloc[j].name) for i, j in equal_pair]
+    gpdf_no_equal = shp_gpdf.iloc[keep]
+    print 'keep =',len(keep), 'equal pair =',len(equal_pair), gpdf_no_equal.shape, datetime.datetime.now()
+    sjoin = gp.tools.sjoin(gpdf_no_equal,gpdf_no_equal,op='within')
+    print 'sjoin.shape =',sjoin.shape, datetime.datetime.now()
+    tree_all_parent = pd.DataFrame(zip(sjoin.index.values, sjoin.index_right.values), columns=['node','parent'])
+    print 'messy tree shape =', tree_all_parent.shape, datetime.datetime.now()
+    tree_direct_parent = find_tree(tree_all_parent.copy())
+    print 'clean tree shape =', tree_direct_parent.shape, datetime.datetime.now()
+    top_level_shp_idx = tree_direct_parent[tree_direct_parent.parent==-1].node.values
+    return shp_gpdf[shp_gpdf.index.isin(top_level_shp_idx)], tree_all_parent, tree_direct_parent, equal_pair_index
+
+def merge_within_by_list_shp(list_shp):
     import geopandas as gp
     import pandas as pd
     from other_utils import find_tree
     gpdf = gp.GeoDataFrame(list_shp,columns=['geometry'])
     sjoin = gp.tools.sjoin(gpdf,gpdf,op='within')
-    messy_tree_df = pd.DataFrame(zip(sjoin.index.values, sjoin.index_right.values), columns=['child','parent'])
+    messy_tree_df = pd.DataFrame(zip(sjoin.index.values, sjoin.index_right.values), columns=['node','parent'])
     clean_tree_df = find_tree(messy_tree_df)
-    top_level_shp_idx = clean_tree_df[clean_tree_df.parent=='root'].child.values
-    return gpdf[gpdf.index.isin(top_level_shp_idx)]
-
+    top_level_shp_idx = clean_tree_df[clean_tree_df.parent==-1].node.values
+    return gpdf[gpdf.index.isin(top_level_shp_idx)].values
 
 def grid_line(mini, maxi, ngrid=10):
     delta = (maxi-mini)/ngrid
@@ -99,15 +131,15 @@ def pts2seg(gp_pts, gp_segs, near_dis_thres=5, buffer_dis=50):
 
     close_jn = gp.tools.sjoin(gp_pts_crs_bfr, gp_segs_crs)[['OBJECTID_left','STREETSEGID_right']]
 
-    handledid = set(pd.unique(close_jn.OBJECTID_left))
-    mask = (~gp_pts_crs_bfr.OBJECTID.isin(handledid))
+    processed_pts = set(pd.unique(close_jn.OBJECTID_left))
+    mask = (~gp_pts_crs_bfr.OBJECTID.isin(processed_pts))
     far_jns = []
     while gp_pts_crs_bfr[mask].shape[0]!=0:
         gp_pts_crs_bfr.loc[mask, 'geometry'] = gp_pts_crs_bfr[mask].buffer(buffer_dis)
         jn = gp.tools.sjoin(gp_pts_crs_bfr[mask], gp_segs_crs)[['OBJECTID_left','STREETSEGID_right']]
         far_jns.append(jn)
-        handledid |= set(pd.unique(jn.OBJECTID_left))
-        mask = (~gp_pts_crs_bfr.OBJECTID.isin(handledid))
+        processed_pts |= set(pd.unique(jn.OBJECTID_left))
+        mask = (~gp_pts_crs_bfr.OBJECTID.isin(processed_pts))
         
     far_jns = pd.concat(far_jns)
     mr_far_jns = pd.merge(gp_segs[['geometry','STREETSEGID']],far_jns , left_on='STREETSEGID', right_on='STREETSEGID_right')
