@@ -173,10 +173,13 @@ def main():
     subtree_tags = []
     for subtree in sub_trees:
         tags = defaultdict(list)
+        cnt = 0
         for oid, otype in subtree:
             obj = osm_dc_bbox.get_osm_obj_by_id(otype, oid)
+            cnt+=1
             for tag, value in obj.tags.items():
                 tags[tag].append(value)
+        print 'len of objs in subtree', cnt
         subtree_tags.append(tags)
     print datetime.datetime.now()
 
