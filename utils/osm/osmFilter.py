@@ -88,3 +88,33 @@ def filter_is_landuse(obj):
 
 def filter_isnot_landuse(obj):
     return not filter_is_landuse(obj)
+    
+
+def filter_is_bike_facilities(obj):
+    tag_bike_walk = [
+        ('highway', set(['path','pedestrian','footway','cycleway','crossing','track'])),
+        ('cycleway','*'),
+        ('cycleway:left','*'),
+        ('cycleway:right','*'),
+        ('cycleway:both','*'),
+        ('oneway:bicycle', '*'),
+        ('bicycle','*'),
+        ('bicycle:lanes','*'),
+        ('bicycle:backward','*'),
+        ('amenity',set(['bicycle_parking','bicycle_rental'])),
+        ('foot','*'),
+        ('sidewalk','*'),
+        ('segregated','*')
+    ]
+    return filter_obj(obj, tag_bike_walk)
+    
+    
+def and_filter(obj, and_tag):
+    for tag, value in and_tag:
+        if tag.startswith('-'):
+            if have_tag_value(obj, tag[1:], value):
+                return False
+        else:
+            if not have_tag_value(obj, tag, value):
+                return False
+    return True    

@@ -1,0 +1,454 @@
+0,1,2
+"('highway=footway',)",foot,3165
+"('highway=footway', 'foot=yes')",foot,676
+"('highway=residential', 'sidewalk=both')",sidewalk,435
+"('highway=footway', 'bicycle=yes')",foot,153
+"('highway=footway', 'bicycle=yes', 'foot=yes')",foot,152
+"('highway=residential', 'sidewalk=no')",sidewalk_no,141
+"('highway=footway', 'bicycle=no')",foot_nobk,115
+"('highway=tertiary', 'sidewalk=both', 'lanes=2')",sidewalk,101
+"('highway=path',)",path,98
+"('highway=cycleway',)",cycleway,98
+"('highway=residential', 'sidewalk=both', 'oneway=yes')",sidewalk,86
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')",no,65
+"('highway=pedestrian',)",pedestrian,62
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=3')",no,58
+"('highway=residential', 'sidewalk=both', 'lanes=2')",sidewalk,58
+"('highway=track',)",track,56
+"('highway=residential', 'sidewalk=left')",sidewalk_left,53
+"('highway=footway', 'bicycle=no', 'foot=yes')",foot_nobk,53
+"('highway=cycleway', 'foot=yes')",cycleway,51
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=4')",no,45
+"('highway=residential', 'sidewalk=right')",sidewalk_right,45
+"('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",43
+"('highway=tertiary', 'cycleway=lane', 'lanes=2')","L1b_2,L1a_1",42
+"('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk_right,41
+"('highway=path', 'bicycle=yes', 'foot=yes')",path,36
+"('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk_right,34
+"('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,32
+"('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,32
+"('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,28
+"('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=4')",sidewalk_right,26
+"('highway=footway', 'foot=designated')",foot,25
+"('highway=cycleway', 'bicycle=yes', 'foot=yes')",cycleway,24
+"('highway=primary', 'sidewalk=both', 'lanes=4')",sidewalk,22
+"('highway=secondary', 'sidewalk=both', 'lanes=4')",sidewalk,20
+"('highway=tertiary', 'cycleway=lane', 'lanes=3')","L1b_2,L1a_1",20
+"('highway=service', 'sidewalk=no')",no,20
+"('highway=tertiary', 'sidewalk=both', 'lanes=3')",sidewalk,19
+"('highway=steps', 'foot=yes')",steps,19
+"('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,L1a_1",19
+"('highway=primary', 'sidewalk=both', 'lanes=6')",sidewalk,19
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'lanes=2')","L1b_2,sidewalk,L1a_1",18
+"('highway=tertiary', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,18
+"('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=1')",sidewalk,18
+"('highway=service', 'bicycle=yes', 'foot=yes')",,17
+"('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,17
+"('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,L1a_1",17
+"('highway=residential', 'sidewalk=no', 'lanes=2')",sidewalk,17
+"('highway=tertiary', 'sidewalk=both', 'lanes=4')",sidewalk,17
+"('highway=trunk', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk,16
+"('highway=secondary', 'sidewalk=both', 'lanes=2')",sidewalk,15
+"('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=3')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",14
+"('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=1')",sidewalk,14
+"('highway=path', 'bicycle=designated', 'foot=designated')",,13
+"('highway=secondary', 'cycleway=lane', 'lanes=4')","L1b_2,L1a_1",13
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,sidewalk,L1a_1",13
+"('highway=tertiary', 'sidewalk=right', 'lanes=2')",sidewalk,13
+"('highway=track', 'bicycle=yes', 'foot=yes')",,13
+"('highway=motorway_link', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=1')",,12
+"('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,L1a_1",12
+"('highway=tertiary', 'sidewalk=both', 'oneway=yes')",sidewalk,11
+"('highway=footway', 'foot=private')",foot,11
+"('highway=footway', 'bicycle=no', 'foot=destination')",foot,11
+"('highway=secondary', 'sidewalk=both', 'lanes=6')",sidewalk,11
+"('highway=cycleway', 'oneway=yes')","T1_2,T4_2",11
+"('highway=residential', 'sidewalk=yes')",sidewalk,10
+"('highway=motorway', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=3')",,10
+"('highway=path', 'bicycle=no', 'foot=yes')",,10
+"('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,10
+"('highway=residential', 'sidewalk=left', 'lanes=2')",sidewalk,10
+"('highway=primary', 'cycleway=no', 'bicycle=yes', 'lanes=8')",,10
+"('highway=service', 'sidewalk=both')",sidewalk,10
+"('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=4')",sidewalk,9
+"('highway=path', 'bicycle=yes')",,9
+"('highway=residential', 'bicycle=designated')",,9
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=5')",sidewalk,9
+"('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,9
+"('highway=residential', 'sidewalk=right', 'lanes=2')",sidewalk,9
+"('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk,8
+"('highway=path', 'foot=yes')",,8
+"('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",8
+"('highway=secondary', 'cycleway=shared_lane', 'lanes=3')",,8
+"('highway=secondary', 'cycleway:right=lane', 'oneway=yes', 'lanes=2')","M4_1,L2,M2a_1",8
+"('highway=residential', 'sidewalk=right', 'oneway=yes')",sidewalk,8
+"('highway=cycleway', 'bicycle=yes')",,8
+"('highway=secondary', 'cycleway=lane', 'lanes=2')","L1b_2,L1a_1",8
+"('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=4')",sidewalk,7
+"('highway=tertiary', 'bicycle=designated', 'lanes=2')",,7
+"('highway=footway', 'cycleway=track', 'foot=yes')","T1_3,foot",7
+"('highway=primary', 'sidewalk=both', 'oneway=no', 'lanes=6')",sidewalk,7
+"('highway=residential', 'sidewalk=no', 'oneway=yes')",sidewalk,7
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes')",sidewalk,7
+"('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,6
+"('highway=service', 'foot=yes')",,6
+"('highway=service', 'bicycle=yes', 'foot=yes', 'oneway=no')",,6
+"('highway=primary', 'sidewalk=both', 'lanes=2')",sidewalk,6
+"('highway=residential', 'sidewalk=no', 'oneway=yes', 'lanes=1')",sidewalk,6
+"('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",6
+"('highway=primary', 'sidewalk=none', 'oneway=yes', 'lanes=2')",sidewalk,6
+"('highway=service', 'sidewalk=right')",sidewalk,6
+"('highway=unclassified', 'sidewalk=no', 'oneway=yes')",sidewalk,6
+"('highway=trunk', 'foot=no', 'oneway=yes', 'lanes=2')",,6
+"('highway=motorway', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=2')",,6
+"('highway=tertiary', 'sidewalk=none', 'lanes=2')",sidewalk,6
+"('highway=cycleway', 'bicycle=designated', 'foot=yes')",,6
+"('highway=footway', 'bicycle=dismount', 'foot=yes')",foot,6
+"('highway=tertiary', 'sidewalk=no', 'lanes=2')",sidewalk,5
+"('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=5')",sidewalk,5
+"('highway=cycleway', 'bicycle=yes', 'foot=permissive')",,5
+"('highway=service', 'sidewalk=left')",sidewalk,5
+"('highway=tertiary', 'sidewalk=both')",sidewalk,5
+"('highway=tertiary', 'cycleway=shared_lane', 'sidewalk=both', 'lanes=2')",sidewalk,5
+"('highway=secondary', 'sidewalk=both', 'lanes=8')",sidewalk,5
+"('highway=residential', 'bicycle=yes')",,5
+"('highway=primary', 'sidewalk=both', 'lanes=5')",sidewalk,5
+"('highway=trunk', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')",sidewalk,5
+"('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,5
+"('highway=tertiary', 'cycleway:right=lane', 'oneway=yes', 'lanes=1')","M4_1,L2,M2a_1",5
+"('highway=residential', 'sidewalk=both', 'oneway=no')",sidewalk,5
+"('highway=secondary', 'bicycle=yes', 'foot=yes', 'oneway=yes')",,4
+"('highway=primary', 'sidewalk=both', 'lanes=3')",sidewalk,4
+"('highway=residential', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",4
+"('highway=service', 'bicycle=yes', 'oneway=yes')",,4
+"('highway=tertiary', 'sidewalk=no', 'oneway=yes', 'lanes=3')",sidewalk,4
+"('highway=footway', 'bicycle=yes', 'foot=designated')",foot,4
+"('highway=residential', 'bicycle=yes', 'sidewalk=both', 'oneway=yes')",sidewalk,4
+"('highway=footway', 'foot=permissive')",foot,4
+"('highway=tertiary', 'cycleway=lane', 'lanes=4')","L1b_2,L1a_1",4
+"('highway=secondary', 'sidewalk=both', 'lanes=3')",sidewalk,4
+"('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=2')",sidewalk,4
+"('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=1')",sidewalk,4
+"('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=2')","L1b_2,L1a_1",4
+"('highway=tertiary', 'cycleway=lane', 'oneway=no', 'lanes=2')","L1b_2,L1a_1",4
+"('highway=cycleway', 'bicycle=designated')",,4
+"('highway=path', 'bicycle=yes', 'foot=yes', 'sidewalk=none')",sidewalk,4
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')","L1b_2,sidewalk,L1a_1",4
+"('highway=primary', 'bicycle=yes', 'foot=yes', 'lanes=6')",,4
+"('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'oneway=no', 'lanes=4')",sidewalk,4
+"('highway=path', 'bicycle=no')",,4
+"('highway=steps', 'bicycle=no')",,4
+"('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,4
+"('highway=pedestrian', 'bicycle=yes')",pedestrian,4
+"('highway=residential', 'bicycle=designated', 'oneway=yes')",,4
+"('highway=secondary', 'sidewalk=right', 'lanes=2')",sidewalk,3
+"('highway=service', 'bicycle=private', 'foot=private')",,3
+"('highway=primary', 'sidewalk=yes', 'oneway=no', 'lanes=4')",sidewalk,3
+"('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=3')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",3
+"('highway=residential', 'cycleway:right=lane', 'oneway=yes')","M4_1,L2,M2a_1",3
+"('highway=secondary', 'foot=designated', 'sidewalk=both', 'lanes=6')",sidewalk,3
+"('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=3')","L2,sidewalk",3
+"('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=tertiary', 'cycleway=shared_lane', 'lanes=2')",,3
+"('highway=cycleway', 'cycleway=track', 'foot=yes')",T1_3,3
+"('highway=tertiary', 'sidewalk=yes', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=tertiary', 'sidewalk=left', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=footway', 'oneway=yes')",foot,3
+"('highway=footway', 'sidewalk=yes')","foot,sidewalk",3
+"('highway=tertiary', 'sidewalk=both', 'oneway=no', 'lanes=2')",sidewalk,3
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=unclassified', 'sidewalk=no')",sidewalk,3
+"('highway=motorway', 'bicycle=no', 'oneway=yes', 'lanes=3')",,3
+"('highway=motorway', 'bicycle=yes', 'foot=yes', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,3
+"('highway=motorway_link', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')",sidewalk,3
+"('highway=tertiary', 'foot=designated', 'oneway=yes', 'lanes=2')",,3
+"('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=3')","L1b_2,L1a_1",3
+"('highway=residential', 'foot=no')",,3
+"('highway=service', 'foot=no', 'oneway=yes')",,3
+"('highway=primary', 'cycleway=track', 'bicycle=yes', 'lanes=5')",T1_3,3
+"('highway=service', 'foot=yes', 'oneway=yes')",,3
+"('highway=primary', 'cycleway=lane', 'lanes=4')","L1b_2,L1a_1",3
+"('highway=primary', 'cycleway=lane', 'lanes=3')","L1b_2,L1a_1",3
+"('highway=residential', 'cycleway:left=opposite_lane', 'cycleway:right=shared_lane', 'oneway=yes')",,3
+"('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=2')","L1b_2,L1a_1",3
+"('highway=tertiary_link', 'sidewalk=both', 'oneway=yes', 'lanes=1')",sidewalk,3
+"('highway=service', 'sidewalk=yes')",sidewalk,3
+"('highway=secondary', 'cycleway:right=track', 'sidewalk=both', 'oneway=yes', 'lanes=4')","T4_3,T2_3,sidewalk",2
+"('highway=residential', 'sidewalk=left', 'oneway=yes')",sidewalk,2
+"('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,2
+"('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'oneway=no', 'lanes=2')","M4_3,L2,L1a_2",2
+"('highway=unclassified', 'sidewalk=right', 'oneway=yes')",sidewalk,2
+"('bicycle=no', 'foot=designated')",,2
+"('highway=secondary', 'bicycle=yes', 'foot=yes', 'lanes=2')",,2
+"('highway=unclassified', 'sidewalk=left')",sidewalk,2
+"('highway=tertiary_link', 'sidewalk=none', 'oneway=yes', 'lanes=1')",sidewalk,2
+"('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'lanes=2')","L1b_2,sidewalk,L1a_1",2
+"('highway=secondary', 'cycleway=shared_lane', 'lanes=4')",,2
+"('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=2')",sidewalk,2
+"('highway=tertiary', 'sidewalk=no', 'oneway=yes')",sidewalk,2
+"('highway=tertiary', 'sidewalk=no')",sidewalk,2
+"('highway=tertiary', 'sidewalk=left', 'lanes=2')",sidewalk,2
+"('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes')",sidewalk,2
+"('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,2
+"('highway=unclassified', 'bicycle=yes', 'sidewalk=no', 'oneway=yes')",sidewalk,2
+"('highway=tertiary', 'sidewalk=both', 'lanes=5')",sidewalk,2
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,sidewalk,L1a_1",2
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,sidewalk,L1a_1",2
+"('highway=unclassified', 'sidewalk=both')",sidewalk,2
+"('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')","L2,sidewalk",2
+"('highway=residential', 'sidewalk=both', 'oneway=no', 'lanes=2')",sidewalk,2
+"('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=4')",sidewalk,2
+"('highway=steps', 'sidewalk=no')",sidewalk,2
+"('highway=service', 'sidewalk=both', 'oneway=yes')",sidewalk,2
+"('highway=service', 'foot=no', 'oneway=no')",,2
+"('highway=service', 'foot=designated', 'sidewalk=left', 'lanes=3')",sidewalk,2
+"('highway=service', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'sidewalk=none', 'oneway=no')",sidewalk,2
+"('highway=secondary', 'sidewalk=no', 'oneway=yes', 'lanes=2')",sidewalk,2
+"('highway=secondary', 'sidewalk=left', 'oneway=yes', 'lanes=1')",sidewalk,2
+"('highway=secondary', 'sidewalk=both', 'lanes=7')",sidewalk,2
+"('highway=secondary', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,2
+"('highway=tertiary', 'cycleway:right=lane', 'lanes=2')",L2,2
+"('bicycle=no',)",,2
+"('highway=unclassified', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,2
+"('highway=cycleway', 'bicycle=yes', 'foot=no')",,2
+"('highway=primary', 'cycleway=lane', 'bicycle=yes', 'lanes=5')","L1b_2,L1a_1",2
+"('highway=primary', 'cycleway=lane', 'lanes=2')","L1b_2,L1a_1",2
+"('highway=pedestrian', 'bicycle=yes', 'sidewalk=yes')","pedestrian,sidewalk",2
+"('highway=primary', 'sidewalk=right', 'lanes=4')",sidewalk,2
+"('highway=primary', 'foot=no', 'oneway=yes', 'lanes=2')",,2
+"('highway=cycleway', 'cycleway=track')",T1_3,2
+"('highway=cycleway', 'cycleway=track', 'bicycle=designated', 'foot=yes')",T1_3,2
+"('highway=residential', 'bicycle=yes', 'oneway=yes')",,2
+"('highway=primary', 'sidewalk=both', 'lanes=7')",sidewalk,2
+"('highway=cycleway', 'foot=yes', 'oneway=no')","T3_2,T2_2",2
+"('highway=primary', 'sidewalk=left', 'lanes=4')",sidewalk,2
+"('highway=motorway_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,2
+"('highway=residential', 'bicycle=designated', 'sidewalk=both', 'lanes=2')",sidewalk,2
+"('highway=footway', 'bicycle=dismount')",foot,2
+"('highway=motorway_link', 'bicycle=no', 'oneway=yes', 'lanes=1')",,2
+"('highway=footway', 'sidewalk=no')","foot,sidewalk",2
+"('highway=motorway', 'bicycle=no', 'foot=no', 'oneway=yes', 'lanes=2')",,2
+"('highway=primary_link', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",2
+"('highway=motorway', 'foot=no', 'oneway=yes', 'lanes=2')",,2
+"('highway=residential', 'cycleway=lane', 'oneway=yes')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",2
+"('highway=primary', 'sidewalk=right', 'lanes=3')",sidewalk,2
+"('highway=primary', 'bicycle=designated', 'lanes=2')",,2
+"('highway=residential', 'foot=yes')",,2
+"('highway=residential', 'oneway:bicycle=no', 'sidewalk=both', 'oneway=yes', 'lanes=1')","S1_1,sidewalk",2
+"('highway=residential', 'sidewalk=both', 'lanes=4')",sidewalk,2
+"('highway=residential', 'foot=yes', 'sidewalk=both')",sidewalk,2
+"('highway=construction', 'sidewalk=both')",sidewalk,2
+"('highway=primary', 'bicycle=yes', 'oneway=yes', 'lanes=2')",,2
+"('highway=residential', 'cycleway=no', 'oneway=yes')",,2
+"('highway=tertiary', 'cycleway:right=shared_lane', 'lanes=2')",,1
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'lanes=2')","L1b_2,sidewalk,L1a_1",1
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'lanes=3')","L1b_2,sidewalk,L1a_1",1
+"('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=tertiary', 'cycleway=lane', 'sidewalk=yes', 'lanes=2')","L1b_2,sidewalk,L1a_1",1
+"('highway=tertiary', 'cycleway=opposite_lane', 'oneway:bicycle=no', 'oneway=yes', 'lanes=1')","S1_1,M3a_2,M3b_2",1
+"('highway=tertiary', 'bicycle=yes', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'cycleway=shared_lane', 'lanes=4')",,1
+"('highway=tertiary', 'cycleway=shared_lane', 'oneway=yes', 'lanes=1')",,1
+"('highway=motorway', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'cycleway=shared_lane', 'sidewalk=both', 'lanes=4')",sidewalk,1
+"('highway=tertiary', 'foot=designated', 'lanes=2')",,1
+"('highway=tertiary', 'bicycle=yes', 'sidewalk=no', 'oneway=yes')",sidewalk,1
+"('highway=motorway', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=tertiary', 'foot=no', 'oneway=yes', 'lanes=1')",,1
+"('highway=motorway', 'sidewalk=no', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=primary', 'bicycle=designated', 'oneway=yes', 'lanes=1')",,1
+"('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=2')","M4_3,L2,L1a_2",1
+"('highway=path', 'bicycle=yes', 'foot=yes', 'oneway=no')",,1
+"('highway=path', 'bicycle=no', 'foot=no')",,1
+"('highway=pedestrian', 'oneway=no')",pedestrian,1
+"('highway=tertiary', 'cycleway=lane')","L1b_2,L1a_1",1
+"('highway=pedestrian', 'foot=private')",pedestrian,1
+"('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=4')","L2,sidewalk",1
+"('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=3')","L1b_2,L1a_1",1
+"('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=4')","L1b_2,L1a_1",1
+"('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,L1a_1",1
+"('highway=pedestrian', 'foot=yes', 'sidewalk=both')","pedestrian,sidewalk",1
+"('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'sidewalk=both', 'lanes=2')","L1b_2,sidewalk,L1a_1",1
+"('highway=tertiary', 'cycleway=lane', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,sidewalk,L1a_1",1
+"('highway=pedestrian', 'bicycle=yes', 'sidewalk=no')","pedestrian,sidewalk",1
+"('highway=tertiary', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=2')","M4_1,L2,M2a_1,sidewalk",1
+"('highway=pedestrian', 'sidewalk=no')","pedestrian,sidewalk",1
+"('highway=tertiary', 'cycleway:left=shared_lane', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')","L2,sidewalk",1
+"('highway=pedestrian', 'bicycle=dismount', 'foot=yes')",pedestrian,1
+"('highway=pedestrian', 'bicycle=designated', 'foot=yes')",pedestrian,1
+"('highway=path', 'foot=no')",,1
+"('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=2')","M4_3,M4_1,M2b_1,L2,M1_2,M2a_1,L1a_2,sidewalk",1
+"('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=3')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",1
+"('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=1')","M4_3,M4_1,M2b_1,L2,M1_2,M2a_1,L1a_2,sidewalk",1
+"('highway=path', 'bicycle=yes', 'foot=yes', 'sidewalk=none', 'oneway=no')",sidewalk,1
+"('highway=pedestrian', 'bicycle=yes', 'foot=yes')",pedestrian,1
+"('highway=footway', 'sidewalk=left', 'oneway=no', 'lanes=1')","foot,sidewalk",1
+"('highway=motorway', 'foot=no', 'oneway=yes', 'lanes=4')",,1
+"('highway=trunk_link', 'sidewalk=right', 'oneway=yes')",sidewalk,1
+"('highway=trunk', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=4')",sidewalk,1
+"('highway=cycleway', 'bicycle=yes', 'oneway=yes')","T1_2,T4_2",1
+"('highway=cycleway', 'bicycle=yes', 'foot=yes', 'oneway=no')","T3_2,T2_2",1
+"('highway=trunk', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=trunk', 'foot=yes', 'oneway=yes', 'lanes=3')",,1
+"('highway=trunk', 'foot=yes', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=cycleway', 'bicycle=yes', 'foot=no', 'oneway=yes')","T1_2,T4_2",1
+"('highway=trunk', 'sidewalk=right', 'oneway=yes', 'lanes=4')",sidewalk,1
+"('highway=trunk_link', 'foot=no', 'sidewalk=no', 'lanes=5')",sidewalk,1
+"('highway=cycleway', 'bicycle=no', 'foot=permissive')",,1
+"('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=trunk_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=trunk', 'bicycle=no', 'foot=no', 'oneway=reversible', 'lanes=2')",,1
+"('highway=unclassified', 'bicycle=no', 'foot=no', 'lanes=4')",,1
+"('highway=unclassified', 'bicycle=yes')",,1
+"('highway=unclassified', 'bicycle=yes', 'sidewalk=no')",sidewalk,1
+"('highway=cycleway', 'bicycle=destination', 'foot=yes')",,1
+"('highway=unclassified', 'cycleway=lane', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",1
+"('highway=unclassified', 'foot=no')",,1
+"('highway=cycleway', 'bicycle=designated', 'foot=designated')",,1
+"('highway=unclassified', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=construction', 'bicycle=yes', 'foot=yes')",,1
+"('bicycle=yes', 'foot=yes')",,1
+"('bicycle=no', 'foot=destination')",,1
+"('highway=trunk', 'bicycle=no', 'foot=no', 'oneway=reversible', 'lanes=3')",,1
+"('highway=cycleway', 'cycleway=lane', 'oneway=yes')","M4_2,M2a_2,M2b_2,T1_2,L1b_2,T4_2,L1a_1",1
+"('highway=motorway', 'bicycle=yes', 'oneway=yes', 'lanes=3')",,1
+"('highway=tertiary', 'sidewalk=none', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=6')",sidewalk,1
+"('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'lanes=4')",sidewalk,1
+"('highway=footway', 'foot=yes', 'oneway=no')",foot,1
+"('highway=footway', 'bicycle=yes', 'sidewalk=no')","foot,sidewalk",1
+"('highway=footway', 'bicycle=permissive', 'foot=permissive')",foot,1
+"('highway=footway', 'bicycle=permissive')",foot,1
+"('highway=footway', 'bicycle=no', 'foot=yes', 'oneway=yes')",foot,1
+"('highway=footway', 'bicycle=no', 'foot=destination', 'oneway=yes')",foot,1
+"('highway=tertiary', 'sidewalk=no', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=footway', 'amenity=parking')",foot,1
+"('highway=footway', 'amenity=fountain')",foot,1
+"('highway=track', 'bicycle=no')",,1
+"('highway=tertiary', 'sidewalk=right', 'lanes=4')",sidewalk,1
+"('highway=cycleway', 'oneway=no')","T3_2,T2_2",1
+"('highway=tertiary', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'sidewalk=right; both', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=cycleway', 'lanes=4')",,1
+"('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=cycleway', 'foot=no')",,1
+"('highway=tertiary', 'sidewalk=yes', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=tertiary_link', 'foot=no', 'sidewalk=no', 'lanes=2')",sidewalk,1
+"('highway=tertiary_link', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=cycleway', 'cycleway=segregated', 'bicycle=designated', 'foot=no')",,1
+"('highway=primary', 'bicycle=yes', 'foot=yes', 'lanes=5')",,1
+"('highway=residential', 'sidewalk=both', 'oneway=no', 'lanes=1')",sidewalk,1
+"('highway=tertiary', 'bicycle=yes', 'lanes=2')",,1
+"('highway=tertiary', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=4')",,1
+"('highway=secondary', 'cycleway=lane', 'bicycle=designated', 'oneway=no', 'lanes=2')","L1b_2,L1a_1",1
+"('highway=secondary', 'cycleway=lane', 'bicycle=yes', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",1
+"('highway=residential', 'cycleway:right=shared_lane')",,1
+"('highway=residential', 'cycleway:left=opposite_lane', 'cycleway:right=shared_lane', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=secondary', 'cycleway=lane', 'lanes=5')","L1b_2,L1a_1",1
+"('highway=secondary', 'cycleway=lane', 'oneway=no', 'lanes=5')","L1b_2,L1a_1",1
+"('highway=residential', 'bicycle=yes', 'sidewalk=yes')",sidewalk,1
+"('highway=residential', 'bicycle=yes', 'sidewalk=both')",sidewalk,1
+"('highway=residential', 'bicycle=yes', 'foot=yes')",,1
+"('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')","L1b_2,sidewalk,L1a_1",1
+"('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes')","M4_2,M2a_2,M2b_2,L1b_2,sidewalk,L1a_1",1
+"('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=2')","M4_2,M2a_2,M2b_2,M2c,L1b_2,sidewalk,L1a_1",1
+"('highway=secondary', 'cycleway=opposite_lane', 'bicycle=designated', 'oneway=yes', 'lanes=1')",,1
+"('highway=residential', 'bicycle=permissive', 'foot=yes', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=residential', 'bicycle=designated', 'sidewalk=no')",sidewalk,1
+"('highway=secondary', 'foot=designated', 'oneway=yes', 'lanes=2')",,1
+"('highway=secondary', 'foot=designated', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=secondary', 'foot=designated', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=secondary', 'foot=designated', 'sidewalk=left', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=residential', 'bicycle=designated', 'oneway=yes', 'lanes=1')",,1
+"('highway=secondary', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=secondary', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=residential', 'bicycle=designated', 'lanes=2')",,1
+"('highway=residential', 'bicycle=designated', 'foot=yes')",,1
+"('highway=primary_link', 'sidewalk=right', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=secondary', 'cycleway:right=track', 'sidewalk=both', 'oneway=yes', 'lanes=5')","T4_3,T2_3,sidewalk",1
+"('highway=residential', 'cycleway=lane')","L1b_2,L1a_1",1
+"('highway=secondary', 'cycleway:right=shared_lane', 'lanes=2')",,1
+"('highway=residential', 'cycleway=no', 'foot=yes', 'sidewalk=both', 'oneway=no')",sidewalk,1
+"('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=residential', 'foot=yes', 'sidewalk=both', 'oneway=no')",sidewalk,1
+"('highway=residential', 'sidewalk=left', 'lanes=3')",sidewalk,1
+"('highway=residential', 'foot=yes', 'oneway=no', 'lanes=4')",,1
+"('highway=residential', 'foot=private')",,1
+"('highway=residential', 'sidewalk=no', 'oneway=no')",sidewalk,1
+"('highway=residential', 'cycleway=track', 'lanes=2')",T1_3,1
+"('highway=residential', 'cycleway=track', 'bicycle=designated', 'lanes=2')",T1_3,1
+"('highway=residential', 'sidewalk=no', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=residential', 'sidewalk=none', 'lanes=2')",sidewalk,1
+"('highway=residential', 'cycleway=shared_lane', 'cycleway:right=shared_lane', 'oneway=no')",,1
+"('highway=residential', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=residential', 'cycleway=lane', 'lanes=2')","L1b_2,L1a_1",1
+"('highway=residential', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'oneway=no', 'lanes=2')",,1
+"('highway=residential', 'sidewalk=yes', 'lanes=2')",sidewalk,1
+"('highway=residential', 'sidewalk=yes', 'oneway=yes')",sidewalk,1
+"('highway=secondary', 'bicycle=designated', 'lanes=2')",,1
+"('highway=residential', 'cycleway=lane', 'sidewalk=right')","L1b_2,sidewalk,L1a_1",1
+"('highway=secondary', 'bicycle=yes', 'lanes=2')",,1
+"('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=2')","M4_3,L2,L1a_2",1
+"('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=3')","M4_3,L2,L1a_2",1
+"('highway=residential', 'cycleway=lane', 'oneway=no')","L1b_2,L1a_1",1
+"('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=both', 'oneway=no', 'lanes=3')","M4_3,L2,L1a_2,sidewalk",1
+"('highway=secondary', 'cycleway:right=lane', 'lanes=3')",L2,1
+"('highway=secondary', 'sidewalk=both', 'lanes=5')",sidewalk,1
+"('highway=primary_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=primary_link', 'sidewalk=right', 'oneway=yes')",sidewalk,1
+"('highway=primary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')","L2,sidewalk",1
+"('highway=service', 'foot=no', 'sidewalk=no')",sidewalk,1
+"('highway=primary', 'foot=designated', 'oneway=yes', 'lanes=2')",,1
+"('highway=service', 'foot=yes', 'oneway=no')",,1
+"('highway=primary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')","L1b_2,sidewalk,L1a_1",1
+"('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=5')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",1
+"('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=yes', 'lanes=1')","M4_2,M2a_2,M2b_2,L1b_2,L1a_1",1
+"('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=4')","L1b_2,L1a_1",1
+"('highway=service', 'sidewalk=no', 'lanes=2')",sidewalk,1
+"('highway=service', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=primary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=4')","L2,sidewalk",1
+"('highway=service', 'sidewalk=yes', 'oneway=yes')",sidewalk,1
+"('highway=steps', 'bicycle=yes', 'sidewalk=no')",sidewalk,1
+"('highway=primary', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=steps', 'foot=permissive')",,1
+"('highway=primary', 'cycleway:right=lane', 'oneway=yes', 'lanes=2')","M4_1,L2,M2a_1",1
+"('highway=primary', 'cycleway:right=lane', 'lanes=3')",L2,1
+"('highway=primary', 'bicycle=yes', 'sidewalk=both', 'lanes=4')",sidewalk,1
+"('highway=tertiary', 'bicycle=designated', 'lanes=3')",,1
+"('highway=tertiary', 'bicycle=designated', 'lanes=4')",,1
+"('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'oneway=no', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'bicycle=destination', 'sidewalk=both', 'lanes=2')",sidewalk,1
+"('highway=tertiary', 'bicycle=destination', 'sidewalk=both', 'oneway=no', 'lanes=3')",sidewalk,1
+"('highway=tertiary', 'bicycle=yes', 'foot=yes')",,1
+"('highway=tertiary', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=1')",,1
+"('highway=primary', 'foot=no', 'sidewalk=no')",sidewalk,1
+"('highway=service', 'foot=designated', 'sidewalk=both', 'lanes=3')",sidewalk,1
+"('highway=primary_link', 'sidewalk=left', 'oneway=yes')",sidewalk,1
+"('highway=secondary_link', 'bicycle=yes', 'oneway=yes')",,1
+"('highway=primary_link', 'sidewalk=both', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=primary_link', 'foot=designated', 'oneway=yes', 'lanes=1')",,1
+"('highway=primary', 'sidewalk=right;left', 'oneway=no', 'lanes=4')",sidewalk,1
+"('highway=secondary', 'sidewalk=left', 'lanes=2')",sidewalk,1
+"('highway=primary', 'sidewalk=right', 'oneway=yes')",sidewalk,1
+"('highway=secondary', 'sidewalk=left', 'oneway=yes', 'lanes=2')",sidewalk,1
+"('highway=secondary', 'sidewalk=right', 'lanes=3')",sidewalk,1
+"('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=primary', 'sidewalk=right', 'lanes=2')",sidewalk,1
+"('highway=primary', 'sidewalk=none', 'oneway=yes', 'lanes=3')",sidewalk,1
+"('highway=secondary_link', 'bicycle=yes', 'oneway=-1')",,1
+"('highway=secondary_link', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=service', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'oneway=yes')",,1
+"('highway=secondary_link', 'foot=yes', 'oneway=yes', 'lanes=1')",,1
+"('highway=secondary_link', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=secondary_link', 'sidewalk=no', 'oneway=yes', 'lanes=1')",sidewalk,1
+"('highway=service', 'bicycle=no', 'foot=no')",,1
+"('highway=primary', 'sidewalk=none', 'lanes=4')",sidewalk,1
+"('highway=service', 'bicycle=private', 'foot=private', 'oneway=no')",,1
+"('highway=service', 'bicycle=yes')",,1
+"('highway=primary', 'sidewalk=left', 'oneway=yes', 'lanes=4')",sidewalk,1
+"('highway=service', 'bicycle=yes', 'foot=yes', 'oneway=yes')",,1
+"('highway=primary', 'sidewalk=both', 'oneway=yes')",sidewalk,1
+"('highway=service', 'cycleway:left=opposite_lane', 'oneway=yes')",,1
+"('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'lanes=2')",sidewalk,1

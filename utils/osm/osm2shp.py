@@ -120,6 +120,27 @@ def test_rltn2merged(path_test_osm_data):
     shpobjs_from_rltns = [(rid, 'Relation', shpobj) for (rid,shpobjs) in shpobjs_from_rltns for shpobj in shpobjs]
     print len(rltns), len(shpobjs_from_rltns)
 
+def osm2gpdf(nodes, ways, rltns):
+    pts = [(nd.id, nd.tags, node2pt(nd),'Node') for nd in bk_nodes]
+    pts_gpdf = gp.GeoDataFrame(pts, columns=['id','tag', 'geometry','type'])
+    lns = [(way.id, way.tags, way2lineOrpoly(OSM_DC_BBOX, way),'Way') for way in bk_ways]
+    lns_gpdf = gp.GeoDataFrame(lns, columns=['id','tag', 'geometry','type'])
+    
+    rltn_pts = []
+    rltn_lns = []
+
+    for r in bk_rltns:
+        shps = rltn2dictShp(OSM_DC_BBOX,r)
+        cnt = 0
+        pts = [(r.id,'{}_{}'.format(r.id,i+cnt), r.tags, pt, 'Relation') for i, pt in enumerate(shps['Point'])]
+        rltn_pts.extend(pts)
+        cnt+=len(shps['Point'])
+        lns = [(r.id,'{}_{}'.format(r.id,i+cnt), r.tags, pt, 'Relation') for i, pt in enumerate(shps['LineString'])]
+        rltn_lns.extend(lns)
+        cnt+=len(shps['LineString'])
+        polys = [('{}_{}'.format(r.id,i+cnt), r.tags, pt, 'Relation') for i, pt in enumerate(shps['Polygon'])]
+        rltn_lns.extend(polys)
+
 if __name__ == '__main__':
     path_test_osm_data = '../../data/test/map.osm'
     test_rltn2merged(path_test_osm_data)

@@ -1,0 +1,454 @@
+pattern	cycle_lane	is_shared	cycle_way	sidewalk	bikable	description
+('highway=cycleway',)			both			two way cycleway
+('highway=cycleway', 'foot=yes')			both			two way cycleway
+('highway=cycleway', 'bicycle=yes', 'foot=yes')			both			two way cycleway
+('highway=cycleway', 'bicycle=yes')			both			two way cycleway
+('highway=cycleway', 'bicycle=designated', 'foot=yes')			both			two way cycleway
+('highway=cycleway', 'bicycle=yes', 'foot=permissive')			both			two way cycleway
+('highway=cycleway', 'bicycle=designated')			both			two way cycleway
+('highway=cycleway', 'bicycle=yes', 'foot=no')			both			two way cycleway
+('highway=cycleway', 'bicycle=no', 'foot=permissive')			both			two way cycleway
+('highway=cycleway', 'bicycle=destination', 'foot=yes')			both			two way cycleway
+('highway=cycleway', 'bicycle=designated', 'foot=designated')			both			two way cycleway
+('highway=cycleway', 'lanes=4')			both			two way cycleway
+('highway=cycleway', 'foot=no')			both			two way cycleway
+('highway=cycleway', 'cycleway=segregated', 'bicycle=designated', 'foot=no')			both			two way cycleway
+('highway=footway',)					yes	footway
+('highway=footway', 'foot=yes')					yes	footway
+('highway=footway', 'bicycle=yes')					yes	footway
+('highway=footway', 'bicycle=yes', 'foot=yes')					yes	footway
+('highway=footway', 'foot=designated')					yes	footway
+('highway=footway', 'foot=private')					yes	footway
+('highway=footway', 'bicycle=dismount', 'foot=yes')					yes	footway
+('highway=footway', 'bicycle=yes', 'foot=designated')					yes	footway
+('highway=footway', 'foot=permissive')					yes	footway
+('highway=footway', 'oneway=yes')					yes	footway
+('highway=footway', 'sidewalk=yes')					yes	footway
+('bicycle=no', 'foot=designated')					no	foot_nobk
+('highway=footway', 'bicycle=dismount')					yes	footway
+('highway=footway', 'sidewalk=no')					yes	footway
+('highway=footway', 'foot=yes', 'oneway=no')					yes	footway
+('highway=footway', 'bicycle=yes', 'sidewalk=no')					yes	footway
+('highway=footway', 'bicycle=permissive', 'foot=permissive')					yes	footway
+('highway=footway', 'bicycle=permissive')					yes	footway
+('highway=footway', 'bicycle=no', 'foot=yes', 'oneway=yes')					no	foot_nobk
+('highway=footway', 'bicycle=no', 'foot=destination', 'oneway=yes')					no	foot_nobk
+('highway=footway', 'amenity=parking')					yes	footway
+('highway=footway', 'amenity=fountain')					yes	footway
+('highway=footway', 'sidewalk=left', 'oneway=no', 'lanes=1')					yes	footway
+('highway=footway', 'bicycle=no')					no	foot_nobk
+('highway=footway', 'bicycle=no', 'foot=yes')					no	foot_nobk
+('highway=footway', 'bicycle=no', 'foot=destination')					no	foot_nobk
+('highway=tertiary', 'cycleway=lane', 'lanes=2')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'lanes=3')	both					two way cycle lanes
+('highway=secondary', 'cycleway=lane', 'lanes=4')	both					two way cycle lanes
+('highway=secondary', 'cycleway=lane', 'lanes=2')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'lanes=4')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=2')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'oneway=no', 'lanes=2')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=3')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'lanes=4')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'lanes=3')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=2')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'bicycle=yes', 'lanes=5')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'lanes=2')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=3')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'lanes=4')	both					two way cycle lanes
+('highway=secondary', 'cycleway=lane', 'bicycle=designated', 'oneway=no', 'lanes=2')	both					two way cycle lanes
+('highway=secondary', 'cycleway=lane', 'lanes=5')	both					two way cycle lanes
+('highway=secondary', 'cycleway=lane', 'oneway=no', 'lanes=5')	both					two way cycle lanes
+('highway=residential', 'cycleway=lane')	both					two way cycle lanes
+('highway=residential', 'cycleway=lane', 'lanes=2')	both					two way cycle lanes
+('highway=residential', 'cycleway=lane', 'oneway=no')	both					two way cycle lanes
+('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=no', 'lanes=4')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')	both			both		two way cycle lanes, two way sidewalk
+('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'sidewalk=yes', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'sidewalk=both', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')	both			both		two way cycle lanes, two way sidewalk
+('highway=primary', 'cycleway=lane', 'sidewalk=both', 'lanes=4')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'lanes=3')	both			both		two way cycle lanes, two way sidewalk
+('highway=residential', 'cycleway=lane', 'sidewalk=right')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway:right=lane', 'lanes=2')	one					one way cycle lane
+('highway=secondary', 'cycleway:right=lane', 'lanes=3')	one					one way cycle lane
+('highway=primary', 'cycleway:right=lane', 'lanes=3')	one					one way cycle lane
+('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=3')	one			both		one way cycle lane, two way sidewalk
+('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')	one			both		one way cycle lane, two way sidewalk
+('highway=tertiary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=4')	one			both		one way cycle lane, two way sidewalk
+('highway=primary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')	one			both		one way cycle lane, two way sidewalk
+('highway=primary', 'cycleway:right=lane', 'sidewalk=both', 'lanes=4')	one			both		one way cycle lane, two way sidewalk
+('highway=tertiary', 'cycleway:left=shared_lane', 'cycleway:right=lane', 'sidewalk=both', 'lanes=2')	one			both		one way cycle lane, two way sidewalk
+('highway=secondary', 'cycleway=opposite_lane', 'bicycle=designated', 'oneway=yes', 'lanes=1')	both					two way cycle lanes
+('highway=tertiary', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=4')					yes	bikable
+('highway=service', 'cycleway:left=opposite_lane', 'oneway=yes')	both					two way cycle lanes
+('highway=secondary', 'cycleway:right=lane', 'oneway=yes', 'lanes=2')	right					one way cycle lane (right)
+('highway=tertiary', 'cycleway:right=lane', 'oneway=yes', 'lanes=1')	right					one way cycle lane (right)
+('highway=residential', 'cycleway:right=lane', 'oneway=yes')	right					one way cycle lane (right)
+('highway=primary', 'cycleway:right=lane', 'oneway=yes', 'lanes=2')	right					one way cycle lane (right)
+('highway=tertiary', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=2')	right			right		one way cycle lane (right), one way sidewalk (right)
+('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=3')	one					one way cycle lane (unknown side)
+('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=residential', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=3')	one					one way cycle lane (unknown side)
+('highway=primary_link', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=residential', 'cycleway=lane', 'oneway=yes')	one					one way cycle lane (unknown side)
+('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=3')	one					one way cycle lane (unknown side)
+('highway=unclassified', 'cycleway=lane', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=secondary', 'cycleway=lane', 'bicycle=yes', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=5')	one					one way cycle lane (unknown side)
+('highway=primary', 'cycleway=lane', 'bicycle=yes', 'oneway=yes', 'lanes=1')	one					one way cycle lane (unknown side)
+('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=1')	one			both		one way cycle lane (unknown side), two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=1')	one			both		one way cycle lane (unknown side), two way sidewalk
+('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes')	one			both		one way cycle lane (unknown side), two way sidewalk
+('highway=tertiary', 'cycleway=lane', 'sidewalk=right', 'oneway=yes', 'lanes=1')	one			right		one way cycle lane (unknown side), one way sidewalk (right)
+('highway=primary', 'cycleway=lane', 'oneway=yes', 'lanes=2')	one					one way cycle lane (unknown side)
+('highway=tertiary', 'cycleway=lane', 'oneway=yes', 'lanes=2')	one					one way cycle lane (unknown side)
+('highway=secondary', 'cycleway=lane', 'oneway=yes', 'lanes=2')	one					one way cycle lane (unknown side)
+('highway=tertiary', 'cycleway=lane', 'bicycle=designated', 'oneway=yes', 'lanes=2')	one					one way cycle lane (unknown side)
+('highway=tertiary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=2')	one			both		one way cycle lane (unknown side), two way sidewalk
+('highway=secondary', 'cycleway=lane', 'sidewalk=both', 'oneway=yes', 'lanes=2')	one			both		one way cycle lane (unknown side), two way sidewalk
+('highway=cycleway', 'cycleway=lane', 'oneway=yes')			one			one way cycleway(separate from road)
+('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'oneway=no', 'lanes=2')	both					two way cycle lane
+('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=2')	both					two way cycle lane
+('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=2')	both					two way cycle lane
+('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'lanes=3')	both					two way cycle lane
+('highway=secondary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=both', 'oneway=no', 'lanes=3')	both			both		two way cycle lane, two way sidewalk
+('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=2')	both			both		two way cycle lanes, two way sidewalk
+('highway=tertiary', 'cycleway:left=lane', 'cycleway:right=lane', 'sidewalk=right', 'oneway=yes', 'lanes=1')	both			both		two way cycle lanes, two way sidewalk
+('highway=motorway', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=3')					yes	bikable motorway
+('highway=motorway', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=2')					yes	bikable motorway
+('highway=motorway_link', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=1')					yes	bikable motorway_link
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')					no	motor only
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=3')					no	motor only
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=4')					no	motor only
+('highway=service', 'sidewalk=no')				no		no sidewalk
+('highway=secondary', 'bicycle=yes', 'foot=yes', 'oneway=yes')					yes	bikable secondary
+('highway=steps', 'bicycle=no')					no	no
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=1')					yes	bikable motorway
+('highway=unclassified', 'sidewalk=no')				no		no sidewalk
+('highway=motorway', 'bicycle=no', 'oneway=yes', 'lanes=3')					no	not bikable motorway
+('highway=motorway_link', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')					no	not bikable motorway_link
+('highway=residential', 'foot=no')					no	no foot residential
+('highway=service', 'foot=no', 'oneway=yes')					no	no foot service
+('highway=secondary', 'bicycle=yes', 'foot=yes', 'lanes=2')					yes	bikable secondary
+('highway=tertiary_link', 'sidewalk=none', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=tertiary', 'sidewalk=no', 'oneway=yes')				no		no sidewalk
+('highway=tertiary', 'sidewalk=no')				no		no sidewalk
+('highway=unclassified', 'bicycle=yes', 'sidewalk=no', 'oneway=yes')				no	yes	bikable, no sidewalk
+('highway=steps', 'sidewalk=no')				no		no sidewalk
+('highway=service', 'foot=no', 'oneway=no')					no	no foot
+('highway=service', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'sidewalk=none', 'oneway=no')					yes	bikable service
+('highway=secondary', 'sidewalk=no', 'oneway=yes', 'lanes=2')				no		no sidewalk
+('bicycle=no',)					no	not bikable
+('highway=primary', 'foot=no', 'oneway=yes', 'lanes=2')					no	no foot
+('highway=motorway_link', 'bicycle=no', 'oneway=yes', 'lanes=1')					no	not bikable motorway_link
+('highway=motorway', 'bicycle=no', 'foot=no', 'oneway=yes', 'lanes=2')					no	not bikable motorway
+('highway=motorway', 'foot=no', 'oneway=yes', 'lanes=2')					no	no foot
+('highway=residential', 'cycleway=no', 'oneway=yes')					no	not bikable residential
+('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=3')				no		no sidewalk
+('highway=tertiary', 'foot=no', 'oneway=yes', 'lanes=1')					no	no foot
+('highway=motorway', 'sidewalk=no', 'oneway=yes', 'lanes=3')				no		no sidewalk
+('highway=path', 'bicycle=no', 'foot=no')					no	not bikable path
+('highway=motorway', 'foot=no', 'oneway=yes', 'lanes=4')					no	no foot
+('highway=trunk_link', 'foot=no', 'sidewalk=no', 'lanes=5')				no	no	no foot,no sidewalk
+('highway=trunk', 'bicycle=no', 'foot=no', 'oneway=reversible', 'lanes=2')					no	not bikable
+('highway=unclassified', 'bicycle=no', 'foot=no', 'lanes=4')					no	not bikable
+('highway=unclassified', 'bicycle=yes')					yes	bikable
+('highway=unclassified', 'bicycle=yes', 'sidewalk=no')				no	yes	bikable, no sidewalk
+('highway=unclassified', 'foot=no')					no	no foot
+('bicycle=yes', 'foot=yes')					yes	bikable
+('bicycle=no', 'foot=destination')					no	not bikable
+('highway=trunk', 'bicycle=no', 'foot=no', 'oneway=reversible', 'lanes=3')					no	not bikable
+('highway=tertiary', 'sidewalk=none', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=6')				no	no	not bikable, no sidewalk
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'lanes=2')				no	no	not bikable, no sidewalk
+('highway=tertiary', 'sidewalk=no', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=track', 'bicycle=no')					no	not bikable track
+('highway=tertiary_link', 'foot=no', 'sidewalk=no', 'lanes=2')				no	no	no foot,no sidewalk
+('highway=residential', 'bicycle=designated', 'sidewalk=no')				no	yes	bikable, no sidewalk
+('highway=secondary', 'foot=designated', 'oneway=yes', 'lanes=2')					yes	footable
+('highway=residential', 'bicycle=designated', 'oneway=yes', 'lanes=1')					yes	bikable residential
+('highway=secondary', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=2')				no	no	no foot,no sidewalk
+('highway=residential', 'bicycle=designated', 'lanes=2')					yes	bikable residential
+('highway=residential', 'bicycle=designated', 'foot=yes')					yes	bikable residential
+('highway=residential', 'foot=yes', 'oneway=no', 'lanes=4')					yes	footable
+('highway=residential', 'foot=private')					yes	footable
+('highway=residential', 'sidewalk=no', 'oneway=no')				no		no sidewalk
+('highway=residential', 'sidewalk=no', 'oneway=yes', 'lanes=2')				no		no sidewalk
+('highway=residential', 'sidewalk=none', 'lanes=2')				no		no sidewalk
+('highway=secondary', 'bicycle=yes', 'lanes=2')					yes	bikable secondary
+('highway=service', 'foot=no', 'sidewalk=no')				no	no	no foot,no sidewalk
+('highway=primary', 'foot=designated', 'oneway=yes', 'lanes=2')					yes	footable
+('highway=service', 'foot=yes', 'oneway=no')					yes	footable
+('highway=service', 'sidewalk=no', 'lanes=2')				no		no sidewalk
+('highway=steps', 'bicycle=yes', 'sidewalk=no')				no	yes	bikable steps,no sidewalk
+('highway=primary', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=2')				no	no	no foot,no sidewalk
+('highway=steps', 'foot=permissive')					no	not bikable
+('highway=tertiary', 'bicycle=designated', 'lanes=3')					yes	bikable tertiary
+('highway=tertiary', 'bicycle=designated', 'lanes=4')					yes	bikable tertiary
+('highway=tertiary', 'bicycle=yes', 'foot=yes')					yes	bikable tertiary
+('highway=tertiary', 'bicycle=yes', 'foot=yes', 'oneway=yes', 'lanes=1')					yes	bikable tertiary
+('highway=primary', 'foot=no', 'sidewalk=no')				no	no	no foot,no sidewalk
+('highway=secondary_link', 'bicycle=yes', 'oneway=yes')					yes	bikable secondary_link
+('highway=primary_link', 'foot=designated', 'oneway=yes', 'lanes=1')					yes	footable
+('highway=primary', 'sidewalk=none', 'oneway=yes', 'lanes=3')				no		no sidewalk
+('highway=secondary_link', 'bicycle=yes', 'oneway=-1')					yes	bikable secondary_link
+('highway=secondary_link', 'foot=no', 'sidewalk=no', 'oneway=yes', 'lanes=1')				no	no	no foot,no sidewalk
+('highway=service', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'oneway=yes')					yes	bikable service
+('highway=secondary_link', 'foot=yes', 'oneway=yes', 'lanes=1')					yes	footable
+('highway=secondary_link', 'sidewalk=no', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=service', 'bicycle=no', 'foot=no')					no	not bikable
+('highway=primary', 'sidewalk=none', 'lanes=4')				no		no sidewalk
+('highway=service', 'bicycle=private', 'foot=private', 'oneway=no')					yes	bikable service
+('highway=service', 'bicycle=yes')					yes	bikable service
+('highway=service', 'bicycle=yes', 'foot=yes', 'oneway=yes')					yes	bikable service
+('highway=path',)					yes	bikable path
+('highway=path', 'bicycle=yes', 'foot=yes')					yes	bikable path
+('highway=path', 'bicycle=designated', 'foot=designated')					yes	bikable path
+('highway=path', 'bicycle=yes')					yes	bikable path
+('highway=path', 'foot=yes')					yes	footable
+('highway=path', 'bicycle=yes', 'foot=yes', 'sidewalk=none')				no	yes	bikable path,no sidewalk
+('highway=path', 'foot=no')					no	no foot
+('highway=path', 'bicycle=yes', 'foot=yes', 'sidewalk=none', 'oneway=no')					yes	bikable path
+('highway=path', 'bicycle=no', 'foot=yes')					no	not bikable path
+('highway=path', 'bicycle=no')					no	not bikable path
+('highway=pedestrian',)					yes	pedestrian
+('highway=pedestrian', 'bicycle=yes')					yes	bikable pedestrian
+('highway=pedestrian', 'oneway=no')					yes	pedestrian
+('highway=pedestrian', 'foot=private')					yes	pedestrian
+('highway=pedestrian', 'bicycle=yes', 'sidewalk=no')				no	yes	bikable pedestrian,no sidewalk
+('highway=pedestrian', 'sidewalk=no')				no	yes	pedestrian,no sidewalk
+('highway=pedestrian', 'bicycle=dismount', 'foot=yes')					no	not bikable pedestrian
+('highway=pedestrian', 'bicycle=designated', 'foot=yes')					yes	bikable pedestrian
+('highway=pedestrian', 'bicycle=yes', 'foot=yes')					yes	bikable pedestrian
+('highway=pedestrian', 'bicycle=yes', 'sidewalk=yes')					yes	bikable pedestrian, both sidewalk
+('highway=pedestrian', 'foot=yes', 'sidewalk=both')				both	yes	pedestrian, both sidewalk
+('highway=primary', 'cycleway=no', 'bicycle=yes', 'lanes=8')					yes	bikable primary
+('highway=residential', 'bicycle=designated')					yes	bikable residential
+('highway=residential', 'bicycle=yes')					yes	bikable residential
+('highway=residential', 'bicycle=designated', 'oneway=yes')					yes	bikable residential
+('highway=residential', 'bicycle=yes', 'oneway=yes')					yes	bikable residential
+('highway=residential', 'foot=yes')					yes	bikable residential
+('highway=residential', 'bicycle=yes', 'foot=yes')					yes	bikable residential
+('highway=tertiary', 'cycleway=opposite_lane', 'oneway:bicycle=no', 'oneway=yes', 'lanes=1')	both					two way cycle lanes
+('highway=residential', 'oneway:bicycle=no', 'sidewalk=both', 'oneway=yes', 'lanes=1')	both	1		both		two way shared cycle lanes, two way sidewalk
+('highway=service', 'bicycle=yes', 'foot=yes')					yes	bikable service
+('highway=service', 'foot=yes')					yes	bikable service
+('highway=service', 'bicycle=yes', 'foot=yes', 'oneway=no')					yes	bikable service
+('highway=service', 'bicycle=yes', 'oneway=yes')					yes	bikable service
+('highway=service', 'bicycle=private', 'foot=private')					yes	bikable service
+('highway=service', 'foot=yes', 'oneway=yes')					yes	bikable service
+('highway=secondary', 'cycleway=shared_lane', 'lanes=4')	both	1				two way shared cycle lanes
+('highway=primary', 'bicycle=designated', 'lanes=2')					yes	bikable primary
+('highway=primary', 'bicycle=yes', 'oneway=yes', 'lanes=2')					yes	bikable primary
+('highway=tertiary', 'cycleway=shared_lane', 'lanes=4')	both					two way cycle lanes
+('highway=tertiary', 'cycleway=shared_lane', 'oneway=yes', 'lanes=1')	one	1				one way shared cycle lane
+('highway=tertiary', 'bicycle=yes', 'sidewalk=no', 'oneway=yes')	one	1				one way shared cycle lane
+('highway=primary', 'bicycle=designated', 'oneway=yes', 'lanes=1')					yes	bikable primary
+('highway=path', 'bicycle=yes', 'foot=yes', 'oneway=no')					yes	bikable path
+('highway=construction', 'bicycle=yes', 'foot=yes')					yes	bikable construction
+('highway=motorway', 'bicycle=yes', 'oneway=yes', 'lanes=3')					yes	bikable motorway
+('highway=primary', 'bicycle=yes', 'foot=yes', 'lanes=5')					yes	bikable primary
+('highway=tertiary', 'bicycle=yes', 'lanes=2')					yes	bikable tertiary
+('highway=residential', 'cycleway=no', 'bicycle=yes', 'foot=yes', 'oneway=no', 'lanes=2')					yes	bikable residential
+('highway=secondary', 'bicycle=designated', 'lanes=2')					yes	bikable secondary
+('highway=tertiary', 'cycleway:right=shared_lane', 'lanes=2')	right	1				one way shared cycle lane right
+('highway=residential', 'cycleway:right=shared_lane')	right	1				one way shared cycle lane right
+('highway=secondary', 'cycleway:right=shared_lane', 'lanes=2')	right	1				one way shared cycle lane right
+('highway=residential', 'cycleway=shared_lane', 'cycleway:right=shared_lane', 'oneway=no')	both	1				two way shared cycle lanes
+('highway=secondary', 'cycleway=shared_lane', 'lanes=3')	both	1				two way shared cycle lanes
+('highway=tertiary', 'cycleway=shared_lane', 'lanes=2')	both	1				two way shared cycle lanes
+('highway=residential', 'cycleway:left=opposite_lane', 'cycleway:right=shared_lane', 'oneway=yes')	both	1				shared_lane_right, cycle lane left
+('highway=residential', 'sidewalk=both')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'lanes=2')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'lanes=2')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=4')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=4')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'lanes=3')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=6')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'lanes=4')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=2')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=6')				both		two way sidewalk
+('highway=residential', 'sidewalk=yes')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=service', 'sidewalk=both')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=4')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=4')				both		two way sidewalk
+('highway=tertiary', 'bicycle=designated', 'lanes=2')					yes	bikable tertiary
+('highway=primary', 'sidewalk=both', 'oneway=no', 'lanes=6')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=2')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'oneway=yes', 'lanes=5')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both')				both		two way sidewalk
+('highway=tertiary', 'cycleway=shared_lane', 'sidewalk=both', 'lanes=2')	both	1		both		two way shared cycle lanes, two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=8')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=5')				both		two way sidewalk
+('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both	yes	bikable tertiary,two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=no')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=3')				both		two way sidewalk
+('highway=residential', 'bicycle=yes', 'sidewalk=both', 'oneway=yes')				both	yes	bikable residential,two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=3')				both		two way sidewalk
+('highway=primary', 'bicycle=yes', 'foot=yes', 'lanes=6')					yes	bikable primary
+('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'oneway=no', 'lanes=4')				both	yes	bikable tertiary,two way sidewalk
+('highway=primary', 'sidewalk=yes', 'oneway=no', 'lanes=4')				both		two way sidewalk
+('highway=secondary', 'foot=designated', 'sidewalk=both', 'lanes=6')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=yes', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'oneway=no', 'lanes=2')				both		two way sidewalk
+('highway=tertiary_link', 'sidewalk=both', 'oneway=yes', 'lanes=1')				both		two way sidewalk
+('highway=service', 'sidewalk=yes')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=both', 'lanes=5')				both		two way sidewalk
+('highway=unclassified', 'sidewalk=both')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=no', 'lanes=2')				both		two way sidewalk
+('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'oneway=yes', 'lanes=4')				both	yes	bikable tertiary,two way sidewalk
+('highway=service', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=7')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'lanes=7')				both		two way sidewalk
+('highway=residential', 'bicycle=designated', 'sidewalk=both', 'lanes=2')				both	yes	bikable residential,two way sidewalk
+('highway=residential', 'sidewalk=both', 'lanes=4')				both		two way sidewalk
+('highway=residential', 'foot=yes', 'sidewalk=both')				both		two way sidewalk
+('highway=construction', 'sidewalk=both')				both		two way sidewalk
+('highway=tertiary', 'foot=designated', 'lanes=2')					yes	footable
+('highway=unclassified', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=tertiary', 'bicycle=yes', 'sidewalk=both', 'lanes=4')				both	yes	bikable tertiary,two way sidewalk
+('highway=tertiary', 'sidewalk=right; both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=separate', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=tertiary', 'sidewalk=yes', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=tertiary_link', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=no', 'lanes=1')				both		two way sidewalk
+('highway=residential', 'bicycle=yes', 'sidewalk=yes')				both	yes	bikable residential,two way sidewalk
+('highway=residential', 'bicycle=yes', 'sidewalk=both')				both	yes	bikable residential,two way sidewalk
+('highway=residential', 'bicycle=permissive', 'foot=yes', 'sidewalk=both', 'oneway=yes')				both	yes	bikable residential,two way sidewalk
+('highway=secondary', 'foot=designated', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=secondary', 'foot=designated', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=residential', 'cycleway=no', 'foot=yes', 'sidewalk=both', 'oneway=no')				both		two way sidewalk
+('highway=residential', 'sidewalk=both', 'oneway=yes', 'lanes=2')				both		two way sidewalk
+('highway=residential', 'foot=yes', 'sidewalk=both', 'oneway=no')				both		two way sidewalk
+('highway=residential', 'sidewalk=yes', 'lanes=2')				both		two way sidewalk
+('highway=residential', 'sidewalk=yes', 'oneway=yes')				both		two way sidewalk
+('highway=secondary', 'sidewalk=both', 'lanes=5')				both		two way sidewalk
+('highway=service', 'sidewalk=yes', 'oneway=yes')				both		two way sidewalk
+('highway=primary', 'bicycle=yes', 'sidewalk=both', 'lanes=4')				both	yes	bikable primary,two way sidewalk
+('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'oneway=no', 'lanes=2')				both	yes	bikable tertiary,two way sidewalk
+('highway=tertiary', 'bicycle=destination', 'sidewalk=both', 'lanes=2')				both	yes	bikable tertiary,two way sidewalk
+('highway=tertiary', 'bicycle=destination', 'sidewalk=both', 'oneway=no', 'lanes=3')				both	yes	bikable tertiary,two way sidewalk
+('highway=service', 'foot=designated', 'sidewalk=both', 'lanes=3')				both		two way sidewalk
+('highway=primary_link', 'sidewalk=both', 'oneway=yes', 'lanes=3')				both		two way sidewalk
+('highway=primary', 'sidewalk=right;left', 'oneway=no', 'lanes=4')				both		two way sidewalk
+('highway=secondary_link', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=primary', 'sidewalk=both', 'oneway=yes')				both		two way sidewalk
+('highway=tertiary', 'bicycle=designated', 'sidewalk=both', 'lanes=2')				both	yes	bikable tertiary,two way sidewalk
+('highway=tertiary', 'cycleway=shared_lane', 'sidewalk=both', 'lanes=4')	both	1		both		two way shared lanes, two way sidewalk
+('highway=residential', 'cycleway:left=opposite_lane', 'cycleway:right=shared_lane', 'sidewalk=both', 'oneway=yes')	both	1		both		shared_lane_right, cycle lane left ,two way sidewalk
+('highway=residential', 'sidewalk=left')				left		sidewalk_left
+('highway=residential', 'sidewalk=left', 'lanes=2')				left		sidewalk_left
+('highway=service', 'sidewalk=left')				left		sidewalk_left
+('highway=tertiary', 'sidewalk=left', 'oneway=yes', 'lanes=1')				left		sidewalk_left
+('highway=tertiary', 'foot=designated', 'oneway=yes', 'lanes=2')					yes	footable
+('highway=residential', 'sidewalk=left', 'oneway=yes')				left		sidewalk_left
+('highway=unclassified', 'sidewalk=left')				left		sidewalk_left
+('highway=tertiary', 'sidewalk=left', 'lanes=2')				left		sidewalk_left
+('highway=service', 'foot=designated', 'sidewalk=left', 'lanes=3')				left		sidewalk_left
+('highway=secondary', 'sidewalk=left', 'oneway=yes', 'lanes=1')				left		sidewalk_left
+('highway=primary', 'sidewalk=left', 'lanes=4')				left		sidewalk_left
+('highway=secondary', 'foot=designated', 'sidewalk=left', 'oneway=yes', 'lanes=2')				left		sidewalk_left
+('highway=residential', 'sidewalk=left', 'lanes=3')				left		sidewalk_left
+('highway=primary_link', 'sidewalk=left', 'oneway=yes')				left		sidewalk_left
+('highway=secondary', 'sidewalk=left', 'lanes=2')				left		sidewalk_left
+('highway=secondary', 'sidewalk=left', 'oneway=yes', 'lanes=2')				left		sidewalk_left
+('highway=primary', 'sidewalk=left', 'oneway=yes', 'lanes=4')				left		sidewalk_left
+('highway=residential', 'sidewalk=no')				no		no sidewalk
+('highway=residential', 'sidewalk=no', 'lanes=2')				no		no sidewalk
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=5')				no	no	not bikable, no sidewalk
+('highway=residential', 'sidewalk=no', 'oneway=yes')				no		no sidewalk
+('highway=motorway', 'bicycle=no', 'foot=no', 'sidewalk=none', 'oneway=yes')				no	no	not bikable, no sidewalk
+('highway=residential', 'sidewalk=no', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=primary', 'sidewalk=none', 'oneway=yes', 'lanes=2')				no		no sidewalk
+('highway=unclassified', 'sidewalk=no', 'oneway=yes')				no		no sidewalk
+('highway=tertiary', 'sidewalk=none', 'lanes=2')				no		no sidewalk
+('highway=tertiary', 'sidewalk=no', 'lanes=2')				no		no sidewalk
+('highway=trunk', 'foot=no', 'sidewalk=none', 'oneway=yes', 'lanes=2')				no		no sidewalk
+('highway=tertiary', 'sidewalk=no', 'oneway=yes', 'lanes=3')				no		no sidewalk
+('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=2')				no		no sidewalk
+('highway=motorway_link', 'sidewalk=no', 'oneway=yes', 'lanes=1')				no		no sidewalk
+('highway=residential', 'sidewalk=right')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=4')				right		sidewalk_right
+('highway=tertiary', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=trunk', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=tertiary', 'sidewalk=right', 'lanes=2')				right		sidewalk_right
+('highway=residential', 'sidewalk=right', 'lanes=2')				right		sidewalk_right
+('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=residential', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=service', 'sidewalk=right')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=secondary', 'sidewalk=right', 'lanes=2')				right		sidewalk_right
+('highway=motorway', 'bicycle=yes', 'foot=yes', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right	yes	bikable motorway,sidewalk_right
+('highway=unclassified', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=secondary', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=unclassified', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'lanes=4')				right		sidewalk_right
+('highway=motorway_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'lanes=3')				right		sidewalk_right
+('highway=tertiary', 'bicycle=yes', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right	yes	bikable tertiary, sidewalk_right
+('highway=motorway', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=motorway', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=trunk_link', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=trunk', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=4')				right		sidewalk_right
+('highway=trunk', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=trunk', 'foot=yes', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=trunk', 'foot=yes', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=trunk', 'sidewalk=right', 'oneway=yes', 'lanes=4')				right		sidewalk_right
+('highway=trunk_link', 'foot=no', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=trunk_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=tertiary', 'sidewalk=right', 'lanes=4')				right		sidewalk_right
+('highway=tertiary', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=secondary', 'foot=designated', 'sidewalk=right', 'oneway=yes', 'lanes=3')				right		sidewalk_right
+('highway=primary_link', 'sidewalk=right', 'oneway=yes', 'lanes=2')				right		sidewalk_right
+('highway=residential', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary_link', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary_link', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=service', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'oneway=yes')				right		sidewalk_right
+('highway=secondary', 'sidewalk=right', 'lanes=3')				right		sidewalk_right
+('highway=secondary', 'sidewalk=right', 'oneway=yes', 'lanes=1')				right		sidewalk_right
+('highway=primary', 'sidewalk=right', 'lanes=2')				right		sidewalk_right
+('highway=steps', 'foot=yes')					yes	footable
+('highway=cycleway', 'oneway=yes')			one			one way cycleway
+('highway=cycleway', 'bicycle=yes', 'oneway=yes')			one			one way cycleway
+('highway=cycleway', 'bicycle=yes', 'foot=no', 'oneway=yes')			one			one way cycleway
+('highway=cycleway', 'cycleway=track', 'foot=yes')			one			one way cycleway
+('highway=primary', 'cycleway=track', 'bicycle=yes', 'lanes=5')			both			two way cycleway
+('highway=cycleway', 'cycleway=track')			one			one way cycleway
+('highway=cycleway', 'cycleway=track', 'bicycle=designated', 'foot=yes')			one			one way cycleway
+('highway=residential', 'cycleway=track', 'lanes=2')			both			two way cycleway
+('highway=residential', 'cycleway=track', 'bicycle=designated', 'lanes=2')			both			two way cycleway
+('highway=footway', 'cycleway=track', 'foot=yes')			both			two way cycleway
+('highway=cycleway', 'foot=yes', 'oneway=no')			both			two way cycleway
+('highway=cycleway', 'bicycle=yes', 'foot=yes', 'oneway=no')			both			two way cycleway
+('highway=cycleway', 'oneway=no')			both			two way cycleway
+('highway=secondary', 'cycleway:right=track', 'sidewalk=both', 'oneway=yes', 'lanes=4')			right	both		one way cycleway right, two way sidewalk
+('highway=secondary', 'cycleway:right=track', 'sidewalk=both', 'oneway=yes', 'lanes=5')			right	both		one way cycleway right, two way sidewalk
+('highway=track',)					no	no
+('highway=track', 'bicycle=yes', 'foot=yes')					yes	bikable track
+('highway=trunk', 'foot=no', 'oneway=yes', 'lanes=2')					no	not footable
